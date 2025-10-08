@@ -1,7 +1,10 @@
+##kubectl get configmap aws-auth -n kube-system -o yaml
+##To  get the default aws authentication file and we need to add modifications in that..
+
 apiVersion: v1
 data:
   mapRoles: |
-    - rolearn: arn:aws:iam::850960379432:role/eksctl-roboshop-nodegroup-roboshop-NodeInstanceRole-oL0StKdmoZzr
+    - rolearn: arn:aws:iam::850960379432:role/eksctl-roboshop-nodegroup-roboshop-NodeInstanceRole-YWPOMkgOOViB
       groups:
       - system:bootstrappers
       - system:nodes
@@ -13,8 +16,9 @@ data:
       username: Arun
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2025-10-06T11:45:41Z"
+  creationTimestamp: "2025-10-08T04:24:29Z"
   name: aws-auth
   namespace: kube-system
-  uid: a20e6929-87cc-476d-aea8-1fffa4204eb6
+  uid: 65b4b7a3-2f44-47fd-99c3-65c4da73a438
+  
 
